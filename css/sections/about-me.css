@@ -4,12 +4,30 @@
     justify-content: center;
     align-items: center;
     max-width: 1660px;
+ position: relative;
+
+    & img{
+        position: absolute;
+        width: 300px;
+        height: auto;
+    }
+    & img:nth-child(1){
+        top: -20%;
+        left: 1%;
+         z-index: -10;
+    }
+    & img:nth-child(2){
+        bottom: -20%;
+        right: 0;
+        z-index: -10;
+    }
 }
 .aboutMe__container{
     width: 70%;
     padding: 3rem;
     background-color: hsla(var(--p-600-code), 0.1);
     border-radius: 3rem;
+    text-align: center;
 }
 .aboutMe__content_container{
     display: flex;
