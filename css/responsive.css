@@ -46,6 +46,14 @@ tablet & small laptop
         text-align: center;
     }
 }
+/**  SKILLS   */
+  .softSkills_badge{
+    position: static !important;
+    transform: none !important;
+  }
+  .softSkills__book_icons{
+    display:none;
+  }
 }
 
 /** 
