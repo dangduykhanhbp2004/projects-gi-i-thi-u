@@ -5,7 +5,7 @@ header{
 .header__container{
     display: flex;
     gap: 40px;
-    & .p{
+    & p{
         color: var(--p-600);
     }
     & span{

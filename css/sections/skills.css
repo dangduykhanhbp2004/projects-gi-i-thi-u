@@ -6,9 +6,10 @@
 
 .skills__grid_container{
     display: grid;
-    grid-template-columns: repeat(2, minmax(320px, auto));
+    grid-template-columns: 350px 1fr;
     grid-template-rows: repeat(2,320px);
-    gap: 12px;  
+    align-items: stretch;
+    gap: 24px;  
 }
 
 .skills__grid_item_header{
@@ -24,7 +25,7 @@
     }
     & p{
         margin-top:12px;
-        color: var(--p--500);
+        color: var(--p-500);
         max-width: 60ch;
     }
 
@@ -37,17 +38,15 @@
      background-color: var(--p-20);
      padding: 2rem 2rem;
      box-shadow:0px 2px 4px hsla(233, 45% ,20% ,0.1);
+     display:flex;
+     flex-direction: column;
+     min-height: 320px;
 
     &:nth-child(1){
         border:none;
-      /*  background-image: url("../../assets/cat1.jpeg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;*/
         background: url("../../assets/cat1.jpeg") center / cover no-repeat;
     }
-&:nth-child(2){
-        grid-column:span2;
+         &:nth-child(2){
         display:flex;
         flex-direction: column;
         justify-content: space-between;
@@ -100,7 +99,7 @@
     }
 
     &:nth-child(3){
-        grid-column:span2;
+        position: relative;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -111,8 +110,8 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
-            gap: 8px;
+            align-content: center;
+            gap: 16px;
             margin-top: 8px;
         }
 
@@ -128,7 +127,7 @@
              font-size: var(--caption-font-size);
              font-weight: 600;
              text-transform: capitalize;
-             position:absolute;
+             position:static;
         
 
         & p{
@@ -162,9 +161,9 @@
         }
 
         & .softSkills__book_icons{
-            position: relative;
-            height:100%;
-            width:100%; 
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
 
             & img{
                 height:40px;
@@ -202,4 +201,360 @@
             background-image: url("../../assets/cat2.jpeg");
         }
     }
+    &:nth-child(1),  &:nth-child(4){
+        padding:0;
+    }
 }
+    
+
+
+
+    /*
+    .skills__container{
+    display:flex;
+    flex-direction:column;
+    gap:32px;
+}
+
+/* =========================
+   GRID LAYOUT
+========================= 
+
+.skills__grid_container{
+    display:grid;
+
+    /* ảnh trái nhỏ hơn content 
+    grid-template-columns:350px 1fr;
+
+    /* 2 hàng bằng nhau 
+    grid-template-rows:repeat(2,320px);
+
+    gap:24px;
+}
+
+/* =========================
+   CARD
+========================= 
+
+.skills__grid_item{
+    overflow:hidden;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    border:2px solid var(--p-100);
+    border-radius:24px;
+
+    background-color:var(--p-20);
+
+    padding:32px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.05);
+
+    min-height:320px;
+}
+
+/* =========================
+   HEADER
+========================= 
+
+.skills__grid_item_header div{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.skills__grid_item_header h2{
+    font-size:var(--h2-font-size);
+    line-height:var(--h2-line-height);
+    font-weight:600;
+    text-transform:capitalize;
+}
+
+.skills__grid_item_header p{
+    margin-top:12px;
+
+    color:var(--p-500);
+
+    max-width:60ch;
+}
+
+/* =========================
+   IMAGE CARD
+========================= 
+
+.skills__grid_item:nth-child(1),
+.skills__grid_item:nth-child(4){
+
+    padding:0;
+
+    border:none;
+}
+
+/* image 1 
+
+.skills__grid_item:nth-child(1){
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.15),
+        rgba(0,0,0,.15)
+    ),
+    url("../../assets/cat1.jpeg")
+    center / cover no-repeat;
+}
+
+/* image 2 
+
+.skills__grid_item:nth-child(4){
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.15),
+        rgba(0,0,0,.15)
+    ),
+    url("../../assets/cat3.jpeg")
+    center / cover no-repeat;
+
+    transition:0.4s ease;
+}
+
+.skills__grid_item:nth-child(4):hover{
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.15),
+        rgba(0,0,0,.15)
+    ),
+    url("../../assets/cat2.jpeg")
+    center / cover no-repeat;
+}
+
+/* =========================
+   TECH STACK CARD
+========================= 
+
+.skills__grid_item:nth-child(2){
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+/* wrapper 
+
+.icons-list-wrapper{
+    overflow:hidden;
+
+    margin-top:16px;
+
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+/* row 
+
+.icons-list{
+    display:flex;
+    align-items:center;
+
+    gap:16px;
+
+    flex-shrink:0;
+}
+
+/* badge 
+
+.icons-badges{
+
+    min-width:180px;
+    height:56px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    gap:12px;
+
+    border-radius:16px;
+
+    padding:0 20px;
+
+    font-size:var(--caption-font-size);
+
+    font-weight:600;
+
+    text-transform:uppercase;
+}
+
+/* image 
+
+.icons-badges img{
+    height:28px;
+}
+
+/* even 
+
+.icons-badges:nth-child(even){
+
+    background:var(--main-gradient-color);
+
+    color:white;
+}
+
+/* odd 
+
+.icons-badges:nth-child(odd){
+
+    background:white;
+
+    border:1px solid var(--p-100);
+}
+
+.icons-badges:nth-child(odd) span{
+
+    background:var(--main-gradient-color);
+
+    color:transparent;
+
+    background-clip:text;
+}
+
+/* =========================
+   SOFT SKILLS CARD
+========================= 
+
+.skills__grid_item:nth-child(3){
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+/* wrapper 
+
+.softSkills__container{
+
+    flex:1;
+
+    display:flex;
+    flex-wrap:wrap;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:16px;
+
+    margin-top:16px;
+}
+
+/* badge 
+
+.softSkills_badge{
+
+    min-width:220px;
+    height:48px;
+
+    border:1px solid var(--p-100);
+
+    border-radius:24px;
+
+    background-color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:var(--caption-font-size);
+
+    font-weight:600;
+
+    text-transform:capitalize;
+
+    transform:rotate(-2deg);
+}
+
+/* text 
+
+.softSkills_badge p{
+
+    background:var(--main-gradient-color);
+
+    color:transparent;
+
+    background-clip:text;
+}
+
+/* alternate rotate 
+
+.softSkills_badge:nth-child(even){
+    transform:rotate(2deg);
+}
+
+/* =========================
+   FLOATING ICONS
+========================= 
+
+.softSkills__book_icons{
+
+    position:relative;
+
+    width:100%;
+    height:100%;
+}
+
+/* icons 
+
+.softSkills__book_icons img{
+
+    position:absolute;
+
+    width:40px;
+    height:40px;
+}
+
+/* icon 1 
+
+.softSkills__book_icons img:nth-child(1){
+
+    top:20px;
+    left:40px;
+
+    transform:
+    scaleX(-1)
+    rotate(-10deg);
+}
+
+/* icon 2 
+
+.softSkills__book_icons img:nth-child(2){
+
+    top:45%;
+    left:45%;
+
+    transform:rotate(120deg);
+}
+
+/* icon 3 
+
+.softSkills__book_icons img:nth-child(3){
+
+    top:10%;
+    right:20%;
+}
+
+/* icon 4 
+
+.softSkills__book_icons img:nth-child(4){
+
+    bottom:15%;
+    right:5%;
+
+    transform:
+    scaleX(-1)
+    rotate(-40deg);
+}
+*/
