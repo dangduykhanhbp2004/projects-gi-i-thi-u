@@ -6,10 +6,9 @@
 
 .skills__grid_container{
     display: grid;
-    grid-template-columns: 350px 1fr;
-    grid-template-rows: repeat(2,320px);
-    align-items: stretch;
-    gap: 24px;  
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, minmax(320px,auto));
+    gap: 12px;  
 }
 
 .skills__grid_item_header{
@@ -47,6 +46,7 @@
         background: url("../../assets/cat1.jpeg") center / cover no-repeat;
     }
          &:nth-child(2){
+        grid-column: span 2;
         display:flex;
         flex-direction: column;
         justify-content: space-between;
@@ -99,6 +99,7 @@
     }
 
     &:nth-child(3){
+        grid-column: span 2;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -127,7 +128,7 @@
              font-size: var(--caption-font-size);
              font-weight: 600;
              text-transform: capitalize;
-             position:static;
+             position:absolute;
         
 
         & p{

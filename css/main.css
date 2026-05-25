@@ -16,10 +16,22 @@
     font-family: "Chakra Petch", sans-serif;
     font-weight:400;
     font-style: normal;
+    scroll-behavior: smooth;
+}
+
+body{
+    /* background pattern*/
+    background-color: var(--foreground-color);
+    opacity: 0.9;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, var(--p-500-code) 10px ), repeating-linear-gradient( var(--p-700-code), #444cf7 );
 }
 a{
     text-decoration: none;
    
+}
+.section{
+    margin-top: 120px;
+    margin-bottom:120px;
 }
 .container{
     max-width: 1536px;
