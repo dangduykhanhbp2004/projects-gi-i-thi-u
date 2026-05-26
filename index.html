@@ -37,14 +37,12 @@
  <!--about me - Giới thiệu bản thân -->
  <section class="aboutMe__section">
 <!-- image animation-->
-<img src="./assets/rocket-icon.svg" alt="rocket icon"/>
-<img src="./assets/laptop-icon.svg" alt="laptop icon"/>
-
-
-
-
-
-
+<img src="./assets/rocket-icon.svg"
+ alt="rocket icon"
+  class="floating rocket"/>
+<img src="./assets/laptop-icon.svg" 
+alt="laptop icon" 
+class="floating computer"/>
 <!-- nội dung chính-->
  <div class="aboutMe__container">
     <div class="aboutMe__content_container">
@@ -69,7 +67,7 @@
 
  <!--Skills-- Kỹ năng  -->
 
- <section class="skills__section">
+ <section class="skills__section hidden">
     <div class="container skills__container">
         <!--header-->
         <div class="section__header">
@@ -79,9 +77,9 @@
         <!--grid-->
         <div class="skills__grid_container">
             <!--grid item 1-->
-            <div class="skills__grid_item"></div>
+            <div class="skills__grid_item hidden delay-1"></div>
               <!--grid item 2-->
-            <div class="skills__grid_item">
+            <div class="skills__grid_item hidden delay-2">
                 <div class="skills__grid_item_header">
                     <div >
                         <img src="./assets/check-icon.svg" alt="check icon"/>
@@ -281,7 +279,7 @@
                  </div>
             </div>
               <!--grid item 3-->
-                <div class="skills__grid_item">
+                <div class="skills__grid_item hidden delay-3">
                     <div class="skills__grid_item_header">
                         <div>
                             <img src="./assets/check-icon.svg" alt="check icon"/>
@@ -291,24 +289,24 @@
                         </div>
 
                     <div class="softSkills__container">
-                        <div class="softSkills_badge">
+                        <div class="softSkills_badge parallax">
                             <p>Giao tiếp hiệu quả</p>
                         </div>
-                        <div class="softSkills_badge">
+                        <div class="softSkills_badge parallax">
                             <p>Quản lý thời gian hiệu quả</p>
                         </div>
-                        <div class="softSkills_badge">
+                        <div class="softSkills_badge parallax">
                             <p>Đáng tin cậy</p>
                         </div>
-                        <div class="softSkills_badge">
+                        <div class="softSkills_badge parallax">
                             <p>Ham học hỏi</p>
                         </div>
                     </div>
                         <div class="softSkills__book_icons">
-                            <img src="./assets/closed-book.svg" alt="closed book icon"/>
-                            <img src="./assets/closed-book.svg" alt="closed book icon"/>
-                            <img src="./assets/closed-book.svg" alt="closed book icon"/>
-                            <img src="./assets/closed-book.svg" alt="closed book icon"/>
+                            <img src="./assets/closed-book.svg" alt="closed book icon" class="parallax"/>
+                            <img src="./assets/closed-book.svg" alt="closed book icon" class="parallax"/>
+                            <img src="./assets/closed-book.svg" alt="closed book icon" class="parallax"/>
+                            <img src="./assets/closed-book.svg" alt="closed book icon" class="parallax"/>
                         </div>
                     </div>
                 <!--grid item 4-->
@@ -437,4 +435,5 @@
 <section class="skills hidden" ></section>
 <script src="main.js"></script>
 </body>
+<div class="cursor-glow"></div>
 </html>
