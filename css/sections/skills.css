@@ -207,6 +207,13 @@
     }
 }
     
+.skills__grid_item{
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+.skills__grid_item:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,.08);
+}
 
 
 

@@ -69,7 +69,7 @@ const rocket =document.querySelector(".rocket");
 
 const computer =document.querySelector(".computer");
 
-const rows =document.querySelector(".icon-list");
+const rows =document.querySelectorALL(".icons-list");
 
 const glow =document.querySelector(".cursor-glow");
 
@@ -123,7 +123,7 @@ const parallaxItems =document.querySelectorAll(".parallax");
      if (rocket){
         const x = Math.sin(time *1.1) * 25 + Math.cos(time * 0.7) * 15;
 
-        const y =  Math.sin(time *1.3) * 20 + Math.cos(time * 0.5) * 10;
+        const y =  Math.cos(time *1.3) * 20 + Math.sin(time * 0.5) * 10;
         
         const rotate = Math.sin(time) * 8;
 
@@ -136,7 +136,7 @@ const parallaxItems =document.querySelectorAll(".parallax");
      if(computer){
          const x = Math.sin(time * 0.8) * -20 + Math.cos(time * 0.4) * 12;
 
-        const y =  Math.sin(time *1.1) * 18 + Math.cos(time * 0.6) * 15;
+        const y =  Math.cos(time *1.1) * 18 + Math.sin(time * 0.6) * 15;
         
         const rotate = Math.cos(time * 0.7 ) * 5;
 
@@ -144,7 +144,7 @@ const parallaxItems =document.querySelectorAll(".parallax");
         rotate(${rotate}deg)`;
      }
 
-      /* -----COMPUTER -------*/
+      /* -----MARQUEE -------*/
 
       rows.forEach((row, index)=>{
         if(index % 2 === 0) {
@@ -184,7 +184,7 @@ const parallaxItems =document.querySelectorAll(".parallax");
         const x =((mouseX / window.innerWidth) - 0.5) * speed * 10;
         const y =((mouseY / window.innerHeight) - 0.5) * speed * 10;
 
-        item.style.translate = `${x}px ${y}px`;
+        item.style.transform = `${x}px ${y}px`;
        });
        requestAnimationFrame(animate);
    }

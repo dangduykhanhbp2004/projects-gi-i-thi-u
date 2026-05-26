@@ -76,7 +76,12 @@ overflow: hidden;
 }
 .rocket{
     width: 120px;
-    right: 10%;
+    top: 10%;
+    left:8%;
+}
+.computer{
+    width:140px;
+    right:10%;
     bottom:10%;
 }
 
@@ -119,7 +124,7 @@ overflow: hidden;
 
 /* -----TECH MARQUEE -------*/
 
-.icons-list-wapper{
+.icons-list-wrapper{
     overflow: hidden;
 }
 .icons-list{
