@@ -65,15 +65,15 @@
 
 
 /* -----ELEMENTS -------*/
-const rocket =document.querySelector(".rocket");
+const rocket = document.querySelector(".rocket");
 
-const computer =document.querySelector(".computer");
+const computer = document.querySelector(".computer");
 
-const rows =document.querySelectorALL(".icons-list");
+const rows = document.querySelectorAll(".icons-list");
 
-const glow =document.querySelector(".cursor-glow");
+const glow = document.querySelector(".cursor-glow");
 
-const parallaxItems =document.querySelectorAll(".parallax");
+const parallaxItems = document.querySelectorAll(".parallax");
 
 /* -----MOUSE -------*/
  let mouseX = window.innerWidth / 2;
@@ -181,10 +181,10 @@ const parallaxItems =document.querySelectorAll(".parallax");
 
        parallaxItems.forEach((item, index) => {
         const speed = (index + 1) * 1.5;
-        const x =((mouseX / window.innerWidth) - 0.5) * speed * 10;
-        const y =((mouseY / window.innerHeight) - 0.5) * speed * 10;
+        const x =((mouseX / window.innerWidth) - 0.5) * speed * 4;
+        const y =((mouseY / window.innerHeight) - 0.5) * speed * 4;
 
-        item.style.transform = `${x}px ${y}px`;
+        item.style.transform = `translate(${x}px, ${y}px)`;
        });
        requestAnimationFrame(animate);
    }
